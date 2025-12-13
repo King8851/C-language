@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\code\\c-language-practice\\2025\\2025_12_13\\test-12-13\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09A4C006-6175-40EB-AEEC-E1D8CB0AF938}|test-12-13\\test-12-13.vcxproj|D:\\code\\c-language-practice\\2025\\2025_12_13\\test-12-13\\test-12-13\\test01.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{09A4C006-6175-40EB-AEEC-E1D8CB0AF938}|test-12-13\\test-12-13.vcxproj|solutionrelative:test-12-13\\test01.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 465,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test01.c",
+              "DocumentMoniker": "D:\\code\\c-language-practice\\2025\\2025_12_13\\test-12-13\\test-12-13\\test01.c",
+              "RelativeDocumentMoniker": "test-12-13\\test01.c",
+              "ToolTip": "D:\\code\\c-language-practice\\2025\\2025_12_13\\test-12-13\\test-12-13\\test01.c",
+              "RelativeToolTip": "test-12-13\\test01.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-12-13T04:36:51.777Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
