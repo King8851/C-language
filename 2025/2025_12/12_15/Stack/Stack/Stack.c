@@ -30,6 +30,7 @@ void STPush(Stack* pst, STDataType x)
 			return;
 		}
 		pst->arr = tmp;
+		pst->capacity = NewCapacity;
 	}
 	pst->arr[pst->top] = x;
 	pst->top++;
