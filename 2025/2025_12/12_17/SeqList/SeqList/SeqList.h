@@ -11,8 +11,8 @@ typedef int SLDataType;
 typedef struct SeqList
 {
 	SLDataType* arr;
-	size_t size;
-	size_t capacity;
+	int size;
+	int capacity;
 }SL;
 
 void SLInit(SL* psl);
@@ -21,12 +21,12 @@ void SLDestroy(SL* psl);
 void SLPushFront(SL* psl, SLDataType x);
 void SLPushBack(SL* psl, SLDataType x);
 
-void SLPopFront(SL* psl);
-void SLPopBack(SL* psl);
+bool SLPopFront(SL* psl);
+bool SLPopBack(SL* psl);
 
 SLDataType SLFront(SL* psl);
 SLDataType SLBack(SL* psl);
 
 bool SLEmpty(SL* psl);
-size_t SLSize(SL* psl);
+int SLSize(SL* psl);
 void SLPrint(SL* psl);

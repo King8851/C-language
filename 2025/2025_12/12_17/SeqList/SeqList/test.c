@@ -12,10 +12,13 @@ void test()
 	SLPushBack(psl, 4);
 	SLPrint(psl);
 
+	SLPopBack(psl);
+	SLPopFront(psl);
 
+	printf("Front = %d\n", SLFront(psl));
+	printf("Back = %d\n", SLBack(psl));
 
 	SLDestroy(psl);
-	free(psl);
 }
 
 int main()
