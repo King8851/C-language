@@ -7,7 +7,6 @@
 #include <stdbool.h>
 
 typedef int HPDataType;
-
 typedef struct Heap
 {
 	HPDataType* a;
