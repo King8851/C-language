@@ -1,11 +1,4 @@
-#include "BinaryTree.h"
-
-void Swap(HPDataType* x, HPDataType* y)
-{
-	HPDataType tmp = *x;
-	*x = *y;
-	*y = tmp;
-}
+#include "Heap.h"
 
 void HPInit(HP* php)
 {
@@ -22,11 +15,18 @@ void HPDestroy(HP* php)
 	php->size = php->capacity = 0;
 }
 
+void Swap(HPDataType* x, HPDataType* y)
+{
+	HPDataType tmp = *x;
+	*x = *y;
+	*y = tmp;
+}
+
 void AdjustUp(HPDataType* a, int child)
 {
 	assert(a);
 	int parent = (child - 1) / 2;
-	while (parent >= 0)
+	while (child > 0)
 	{
 		if (a[parent] > a[child])
 		{
@@ -47,9 +47,9 @@ void AdjustUp(HPDataType* a, int child)
 void HPPush(HP* php, HPDataType x)
 {
 	assert(php);
-	
+
 	//尾插
-	if (php->size = php->capacity)
+	if (php->size == php->capacity)
 	{
 		int NewCapacity = php->capacity ? 2 * php->capacity : 4;
 		HPDataType* tmp = (HPDataType*)realloc(php->a, NewCapacity * sizeof(HPDataType));
@@ -69,11 +69,11 @@ void HPPush(HP* php, HPDataType x)
 	php->size++;
 }
 
-void AdjustDown(HPDataType* a, int parent)
+void AdjustDown(HPDataType* a, int n, int parent)
 {
 	assert(a);
 	parent++;
-	
+
 }
 
 void HPPop(HP* php)
@@ -86,6 +86,19 @@ void HPPop(HP* php)
 
 	//向下调整
 	AdjustDown(php->a, 0);
+}
+
+bool HPEmpty(HP* php)
+{
+	assert(php);
+	return php->size == 0;
+}
+
+HPDataType HPTop(HP* php)
+{
+	assert(php);
+	assert(php->size > 0);
+	return php->a[php->size - 1];
 }
 
 void HPPrint(HP* php)

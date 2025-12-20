@@ -1,4 +1,4 @@
-#include "BinaryTree.h"
+#include "Heap.h"
 
 void test()
 {
@@ -11,6 +11,14 @@ void test()
 		HPPush(&hp, a[i]);
 	}
 	HPPrint(&hp);
+
+	int k = 0;
+	scanf("%d", &k);
+	while (k-- && HPEmpty(&hp) != true)
+	{
+		printf("%d ", HPTop(&hp));
+		HPPop(&hp);
+	}
 }
 
 int main()
