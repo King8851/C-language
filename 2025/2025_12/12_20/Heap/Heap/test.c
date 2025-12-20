@@ -11,6 +11,8 @@ void Heap_Test()
 	size_t sz = sizeof(a) / sizeof(a[0]);
 	ArrPrint(a, sz);
 
+	for (size_t i = 0; i < sz; i++)	HPPush(&hp, a[i]);
+
 	//´òÓ¡Topk
 	printf("Topk: ");
 	int k = 0;
