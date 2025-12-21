@@ -4,7 +4,7 @@
 void HPInit(HP* php)
 {
 	assert(php);
-	php->type = MIN;
+	php->type = HPTYPE;
 	php->a = NULL;
 	php->size = php->capacity = 0;
 }
@@ -144,7 +144,7 @@ void HPPrint(HP* php)
 }
 
 //Êý×é´òÓ¡
-void ArrPrint(HPDataType* a, size_t sz)
+void ArrPrint(HPDataType* a, int sz)
 {
 	size_t i = 0;
 	for (i = 0; i < sz; i++)

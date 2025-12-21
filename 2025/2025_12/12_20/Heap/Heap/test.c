@@ -13,7 +13,7 @@ void Heap_Test()
 
 	for (size_t i = 0; i < sz; i++)	HPPush(&hp, a[i]);
 
-	//打印Topk
+	//Topk方法1: 空间复杂度O(N), 数据量大时可能难以承受
 	printf("Topk: ");
 	int k = 0;
 	scanf("%d", &k);
