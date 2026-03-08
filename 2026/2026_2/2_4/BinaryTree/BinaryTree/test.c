@@ -34,16 +34,14 @@ void LevelOrder(BTNode* root)
 	Queue* q = (Queue*)malloc(sizeof(Queue));
 	QInit(q);
 	QPush(q, root);
-	BTNode* left = NULL;
-	BTNode* right = NULL;
+	BTNode* front;
 	while (!QEmpty(q))
 	{
-			left = QFront(q)->left;
-			right = QFront(q)->right;
-			if (left)	QPush(q, left);
-			if (right)	QPush(q, right);
-			printf("%d ", QFront(q)->val);
-			QPop(q);
+		front = QFront(q);
+		if (front->left)	QPush(q, front->left);
+		if (front->right)	QPush(q, front->right);
+		printf("%d ", QFront(q)->val);
+		QPop(q);
 	}
 	QDestroy(q);
 }
