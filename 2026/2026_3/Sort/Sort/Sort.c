@@ -6,15 +6,6 @@ void Swap(int* x, int* y)
 	*x = *y;
 	*y = tmp;
 }
-void TestPrint(char* s, int* a)
-{
-	printf("%s", s);
-	for (int i = 100; i < 110; i++)
-	{
-		printf("%d ", a[i]);
-	}
-	printf("\n");
-}
 
 //≤Â»Î≈≈–Ú
 void InsertSort(int* a, int n)
@@ -66,7 +57,23 @@ void ShellSort(int* a, int n)
 //—°‘Ò≈≈–Ú
 void SelectSort(int* a, int n)
 {
-	int begin
+	int begin = 0;
+	int end = n - 1;
+	while (begin < end)
+	{
+		int mini = begin;
+		int maxi = begin;
+		for (int i = begin + 1; i <= end; i++)
+		{
+			if (a[i] < a[mini])	mini = i;
+			if (a[i] > a[maxi])	maxi = i;
+		}
+		Swap(&a[begin], &a[mini]);
+		if (begin == maxi)
+			maxi = mini;
+		Swap(&a[end], &a[maxi]);
+		begin++, end--;
+	}
 }
 
 //∂—≈≈–Ú

@@ -3,7 +3,7 @@
 void TestOP()
 {
 	srand((unsigned int)time(0));
-	const int N = 1000000;
+	const int N = 100000;
 	int* a1 = (int*)malloc(sizeof(int) * N);
 	int* a2 = (int*)malloc(sizeof(int) * N);
 	int* a3 = (int*)malloc(sizeof(int) * N);
@@ -31,7 +31,7 @@ void TestOP()
 	int end2 = clock();
 	
 	int begin3 = clock();//—°‘Ò≈≈–Ú
-	//SelectSort(a3, N);
+	SelectSort(a3, N);
 	int end3 = clock();
 	
 	int begin4 = clock();//∂—≈≈–Ú
@@ -50,15 +50,6 @@ void TestOP()
 	//BubbleSort(a7, N);
 	int end7 = clock();
 
-	//TestPrint("InsertSort:", a1);
-	TestPrint("ShellSort:", a2);
-	//TestPrint("SelectSort:", a3);
-	TestPrint("HeapSort:", a4);
-	//TestPrint("QuickSort:", a5);
-	//TestPrint("MergeSort:", a6);
-	//TestPrint("BubbleSort:", a7);
-	printf("\n");
-
 	printf("InsertSort:%d\n", end1 - begin1);
 	printf("ShellSort:%d\n", end2 - begin2);
 	printf("SelectSort:%d\n", end3 - begin3);
@@ -76,8 +67,23 @@ void TestOP()
 	free(a7);
 }
 
+void SortTest()
+{
+	int a[10] = { 9,7,8,2,3,2,5,6,3,1 };
+	//InsertSort(a, 10);
+	//ShellSort(a, 10);
+	//SelectSort(a, 10);
+	//HeapSort(a, 10);
+	//QuickSort(a, 0, 9);
+	//MergeSort(a, 10);
+	//BubbleSort(a, 10);
+	
+	for (int i = 0; i < 10; i++)	printf("%d ", a[i]);
+}
+
 int main()
 {
 	TestOP();
+	//SortTest();
 	return 0;
 }
